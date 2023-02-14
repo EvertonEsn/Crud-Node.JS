@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="admin.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="container">
+      <section class="menu">
+        <ul>
+          <li><a href="/admin">Home</a></li>
+          <li><a href="/usuarios">Cadastro de Usuário</a></li>
+          <li><a href="/sair">Logout</a></li>
+        </ul>
+      </section>
+
+      <section class="conteudo">
+        <table>
+          <tr>
+            <td width="200">Nome</td>
+            <td width="200">usuario</td>
+            <td width="200">senha</td>
+            <td width="200">tipo</td>
+            <td width="200">status</td>
+            <td width="200">editar</td>
+            <td width="200">excluir</td>
+          </tr>
+
+          <% for (usuario of usuarios){ %>
+          <tr>
+            <td width="200"><%= usuario.nome%></td>
+            <td width="200"><%= usuario.usuario%></td>
+            <td width="200"><%= usuario.senha%></td>
+            <td width="200"><%= usuario.tipo%></td>
+            <td width="200"><%= usuario.status%></td>
+            <td width="200"><a href="/usuario/<%= usuario.id %>">editar</a></td>
+            <td width="200">
+              <a href="/excluir/<%= usuario.id %>">excluir</a>
+            </td>
+          </tr>
+          <% } %>
+        </table>
+      </section>
+    </section>
+  </body>
+</html>

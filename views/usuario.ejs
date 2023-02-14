@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Modelo</title>
+    <link rel="stylesheet" href="../admin.css" />
+  </head>
+
+  <body>
+    <section class="container">
+      <section class="menu">
+        <ul>
+          <li><a href="/admin">Home</a></li>
+          <li><a href="/usuarios">Cadastro de Usuário</a></li>
+          <li><a href="/sair">Logout</a></li>
+        </ul>
+      </section>
+
+      <section class="conteudo">
+        <h1></h1>
+        <h1>Formulário de cadastro</h1>
+        <form action="/atualizar" method="post" class="formulario">
+          <label>Nome:</label>
+          <input
+            type="text"
+            class="nome validar"
+            name="nome"
+            id="nome"
+            value="<%= dados.nome%>"
+          />
+          <label>Id:</label>
+          <input
+            type="hidden"
+            class="id"
+            name="id"
+            id="id"
+            value="<%= dados.id%>"
+          />
+          <label>Usuário:</label>
+          <input
+            type="text"
+            class="usuario validar"
+            name="usuario"
+            id="usuario"
+            value="<%= dados.usuario%>"
+          />
+          <label>Senha:</label>
+          <input
+            type="password"
+            class="senha validar"
+            name="senha"
+            id="senha"
+            value="<%= dados.senha%>"
+          />
+          <label>Tipo:</label>
+          <input
+            type="text"
+            class="tipo validar"
+            name="tipo"
+            id="tipo"
+            value="<%= dados.tipo%>"
+          />
+          <label>Status</label>
+          <input
+            type="text"
+            class="usuario validar"
+            name="status"
+            id="status"
+            value="<%= dados.status%>"
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </section>
+    <!-- <script src="./public/validaCpf.js"></script>
+    <script src="./public/main.js"></script> -->
+  </body>
+</html>
